@@ -9,8 +9,4 @@ export default createGlobalStyle`
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	}
-
-	#root {
-		margin: 0 auto;
-	}
 `;

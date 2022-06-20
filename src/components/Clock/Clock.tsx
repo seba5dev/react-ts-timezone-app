@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Title, Text } from "./styles";
+import { Container, Title, Text, Card, BigText } from "./styles";
 import AnalogClock from "analog-clock-react";
 
 export default function Clock() {
@@ -7,7 +7,7 @@ export default function Clock() {
 
   let options = {
     useCustomTime: true, // set this to true
-    width: "20rem",
+    width: "15rem",
     border: true,
     borderColor: "#2e2e2e",
     baseColor: "#fff",
@@ -31,12 +31,14 @@ export default function Clock() {
 
   return (
     <Container>
-      <Title>Hora actual en tu ubicación</Title>
-      <AnalogClock {...options} />
-      <Text>{time.toLocaleTimeString()}</Text>
-      <Text>
-        Tu zona horaria es {Intl.DateTimeFormat().resolvedOptions().timeZone}
-      </Text>
+      <Card>
+        <AnalogClock {...options} />
+        <Title>Hora actual en tu ubicación</Title>
+        <BigText>{time.toLocaleTimeString()}</BigText>
+        <Text>
+          Tu zona horaria es {Intl.DateTimeFormat().resolvedOptions().timeZone}
+        </Text>
+      </Card>
     </Container>
   );
 }
